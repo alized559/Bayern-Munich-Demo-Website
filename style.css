@@ -272,6 +272,8 @@ ul {
 
 .squad img {
   width: 100%;
+    width: 100%;
+    margin-top: 40px;
 }
 
 .col img {
@@ -280,15 +282,25 @@ ul {
 
 .data {
   margin-top: 50px;
-  /*background-color: white;*/
+  background-color: white;
 }
 
 table {
-  color: black;
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 100px;
+    color: black;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 100px; 
+    margin-top: 50px;
+    padding: 1px;
+}
+
+table {
+    color: rgb(56, 56, 56);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 100px;
 }
 
 td, th {
@@ -299,4 +311,114 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #bdbbbb67;
+}
+
+.contain {
+  margin-top: 40px;
+}
+
+.season {
+    color: rgb(167, 42, 42);
+    margin-top: 50px;
+}
+
+.standing table {
+    color: rgb(56, 56, 56);
+}
+
+.col {
+    text-align: center;
+}
+
+.contain {
+    background-color: white;
+    padding: 1px;
+}
+
+.stadium {
+  color: rgb(27, 61, 109);
+  margin-top: 50px;
+  padding-left: 10px;
+  font-size: 30px;
+}
+
+.out-stad img {
+  display: block;
+  width: 480px;
+  margin-top: 50px;
+}
+
+.in-stad img {
+  display: block;
+  width: 480px;
+  margin-top: 50px;
+}
+
+.out, .in{
+  display: block;
+  text-align: center;
+}
+
+.out-stad, .in-stad {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stad {
+  padding-bottom: 100px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: rgb(27, 61, 109);
+}
+
+.stadium p, h3 {
+  text-align: center;
+  font-size: 20px;
+}
+
+.shirt {
+  margin-top: 40px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  padding-bottom: 150px;
+}
+
+.shirt img {
+  width: 500px;
+}
+
+.shirt h1 {
+  padding-top: 50px;
+}
+
+.line {
+  width: 50%;
+}
+
+.price {
+  color: rgb(167, 42, 42);
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+
+.button {
+  background-color: rgb(167, 42, 42);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.away {
+  margin-bottom: 45px;
 }
