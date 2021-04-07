@@ -46,39 +46,80 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*
 ul {
   list-style-type: none;
   float: left;
-  margin-top: 35px;
-}
+  margin-top: 0px;
+}*/
 
 .bayern {
-  margin-top: 6px;
-  margin-left: 40px;
+  margin-top: 10px;
+  margin-left: 0px;
   padding: 6px;
+  width: 80px;
   float: left;
-  width: 85px;
 }
 
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  margin-top: 28px;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  ul.topnav li img {display: none;}
+}
+
+/*
 .nv {
   width: 100%;
   height: 14vh;
   position: relative;
+  background-color: black;
 }
 
 .nv li {
   color: rgb(167, 42, 42);
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: -5px;
   font-weight: bold;
   font-size: 20px;
-  display: inline-block;
+  float: left;
 }
 
 .nv li a {
   color: rgb(167, 42, 42);
   margin-right: 30px;
   text-decoration: none;
+  padding: 10px;
 }
+
+.nv li a:hover {
+  background-color: white;
+}*/
 
 .images {
   margin-top: 40px;
