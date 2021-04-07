@@ -67,12 +67,13 @@ ul.topnav {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: rgb(211, 11, 45);
 }
 
 ul.topnav li {
   float: left;
 }
+
 
 ul.topnav li a {
   display: block;
@@ -81,10 +82,12 @@ ul.topnav li a {
   padding: 14px 16px;
   text-decoration: none;
   margin-top: 28px;
+  /*border-right: 1px solid #bbb;*/
 }
 
+
 ul.topnav li a:hover:not(.active) {
-  background-color: #111;
+  background-color: black;
 }
 
 ul.topnav li a.active {
@@ -98,6 +101,7 @@ ul.topnav li.right {
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
+  /*ul.topnav li a {border-bottom: 1px solid #bbb;}*/
   ul.topnav li img {display: none;}
 }
 
