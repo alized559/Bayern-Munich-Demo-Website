@@ -48,7 +48,7 @@ if (isset($_POST['pay'])) {
                 <input type="text" name="name" placeholder="Enter name on card" value="<?php echo $name; ?>" required>
             </div>
             <div class="inputs">
-                <input type="text" name="cnum" placeholder="Enter card number" value="<?php echo $cnum; ?>" required>
+                <input type="text" name="cnum" placeholder="Enter card number" value="<?php $cnum; ?>" required>
             </div>
             <div class="inputs">
                 <input type="text" name="expmonth" placeholder="Enter exp month" required>
