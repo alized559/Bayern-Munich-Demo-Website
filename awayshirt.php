@@ -27,7 +27,6 @@ if (isset($_GET['clear'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <?php if (isset($_SESSION['username'])): ?>
             <div class="nav">
                 <ul class="topnav">
                     <li><img class="bayern" src="images/bayern.png" alt="bayern logo"></li>
@@ -36,20 +35,6 @@ if (isset($_GET['clear'])) {
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
             </div>
-        <?php else: ?>
-        <div class="nav">
-            <ul class="topnav">
-                <li><img class="bayern" src="images/bayern.png" alt="bayern logo"></li>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="standings.html">Standings</a></li>
-                <li><a href="shirts.php">Shirts</a></li>
-                <li><a href="stadium.html">AllianzArena</a></li>
-                <li><a href="login.php">User</a></li>
-            </ul>
-        </div>
-        <?php endif; ?>
         <div class="shirt">
             <h1>FC BAYERN AWAY SHIRT 20/21</h1>
             <p>If you want the home shirt click <a href="shirts.php">here</a></p>
@@ -91,9 +76,16 @@ if (isset($_GET['clear'])) {
                        $array[] = $row;
                     }
                     $totalPrice = 0;
+                    $homeQuantity = 0;
+                    $awayQuantity = 0;
                     for ($i = 0; $i < mysqli_num_rows($query); $i++) {
                         $totalPrice += $array[$i]['price'];
-                    ?>
+                        if ($array[$i]['name'] == "Home Shirt") {
+                            $homeQuantity += $array[$i]['quantity'];
+                        } else if ($array[$i]['name'] == "Away Shirt") {
+                            $awayQuantity += $array[$i]['quantity'];
+                        }
+                        ?>
                     <tr>
                         <td><?php echo $array[$i]['id'] ?></td>
                         <td><?php echo $array[$i]['name'] ?></td>
@@ -122,6 +114,9 @@ if (isset($_GET['clear'])) {
                 }
                 </script>
         </div>
+        <div class="divImg">
+                <img src="images/bayern.png" alt="bayern logo" style="width: 100px;">
+            </div>
         <div class="end">
             <div class="partners">
                 <p>PARTNER</p>
