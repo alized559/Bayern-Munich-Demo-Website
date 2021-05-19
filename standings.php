@@ -9,7 +9,7 @@ session_start();
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div class="nav">
+    <div class="nav">
             <ul class="topnav">
                 <li><img class="bayern" src="images/bayern.png" alt="bayern logo"></li>
                 <li><a href="index.php">Home</a></li>
@@ -17,11 +17,13 @@ session_start();
                 <li><a href="team.php">Team</a></li>
                 <li><a href="standings.php">Standings</a></li>
                 <li><a href="stadium.php">AllianzArena</a></li>
-                <?php if (isset($_SESSION['username'])) { ?>
+                <?php if (isset($_SESSION['username']) and $_SESSION['username'] == 'admin') { ?>
+                    <li><a href="addnews.php">User</a></li>
+                <?php } else if (isset($_SESSION['username'])){ ?>
                     <li><a href="shirts.php">User</a></li>
                 <?php } else { ?>
                     <li><a href="login.php">User</a></li>
-                <?php } ?>
+                    <?php } ?>
             </ul>
         </div>
         <div class="contain">
