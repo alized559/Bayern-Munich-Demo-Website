@@ -35,7 +35,7 @@ include('server.php');
         
         <div class="details">
             <div class="parag">
-                <p><b>BUNDESLIGA</b><br>SAT 3-4-2021 7:30 PM<br>Stadium: Leipzig</p>
+                <p><b>BUNDESLIGA</b><br>SAT 3-6-2021 7:30 PM<br>Stadium: Leipzig</p>
             </div>
             <div class="rbleipzig">
                 <p>RB Leipzig</p>

@@ -15,7 +15,7 @@ $data = ob_get_clean();
             <img src="images/bayern.png">
         </div>
         <div class="back">
-            <a href="shirts.php"><h3>Back</h3></a>
+           <a href="shirts.php"><h3>Back</h3></a>
         </div>
         <hr class="payhr">
         <div class="yours">
@@ -42,13 +42,17 @@ $data = ob_get_clean();
             <form method="post" action="checkout.php">
                 <label>your delivery country</label>
                 <select>
-                <option>Germany</option>
-                <option>Spain</option>
-                <option>Italy</option>
-                <option>Netherlands</option>
-                <option>Belgika</option>
-                <option>France</option>
-                <option>Portugal</option>
+                    <option>Germany</option>
+                    <option>Belgika</option>
+                    <option>England</option>
+                    <option>France</option>
+                    <option>Italy</option>
+                    <option>Russia</option>
+                    <option>Netherlands</option>
+                    <option>Spain</option>
+                    <option>Sweden</option>
+                    <option>Poland</option>
+                    <option>Portugal</option>
                 </select>
                 <p>Expected shipment costs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00$</p>
                 <hr>
@@ -56,6 +60,7 @@ $data = ob_get_clean();
                 <h3 class="tot">Total</h3>
                 <h3 class="cartformh3"><?php echo $totalPrice ?></h3>
                 <h5>Including VAT</h5>
+                <button class="check"><a href="cart.php?clear='1'" style="color: white; text-decoration: none;">Clear</a></button>
                 <button class="check">Pay</button>
             </form>
         </div>

@@ -376,6 +376,7 @@ ul.topnav li.right {
 .data {
   margin-top: 50px;
   background-color: white;
+  
 }
 
 /* tables start here */
@@ -383,15 +384,15 @@ ul.topnav li.right {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-collapse: collapse;
     width: 90vw;
-    margin: 5vh auto 10vh auto;
+    margin: 50px auto 50px auto;
     color: rgb(56, 56, 56);
 }
 
 .table1 td , .standing table td, .table1 th {
-  border: 1px solid #dddddd;
+  border: 1px solid #c0c0c0;
   text-align: left;
-  padding: 1vw;
-  font-size: 1.2vw;
+  padding: 10px;
+  font-size: 15px;
 }
 
 .table1, .standing table tr:nth-child(even) {
@@ -831,7 +832,7 @@ tr:nth-child(even){
 .cartform {
   border: 1px solid black;
   color: black;
-  margin-left: 50px;
+  margin-left: 2%;
   padding: 10px;
   margin-bottom: 50px;
 }
@@ -860,13 +861,14 @@ tr:nth-child(even){
 
 .cartformh3 {
  float: right;
-  margin-right: 80%;
+  margin-right: 82.5%;
   color: rgb(167, 42, 42);
 }
 
 .check {
+  margin-left: 18px;
+  margin-bottom: 20px;
   width: 200px;
-  margin-left: 150px;
   padding: 8px;
   background-color: rgb(167, 42, 42);
   color: white;
@@ -874,6 +876,7 @@ tr:nth-child(even){
   border: none;
   cursor: pointer;
 }
+
 th {
   border: 1px solid #b3b3b3;
 }
@@ -946,4 +949,18 @@ input[type=password]::-ms-reveal,
 input[type=password]::-ms-clear
 {
     display: none;
+}
+
+.back h3 {
+  color: rgb(167, 42, 42);
+  margin-left: 20px;
+}
+
+.back a {
+  text-decoration: none;
+}
+
+.here a {
+  text-decoration: none;
+  color: rgb(167, 42, 42);
 }

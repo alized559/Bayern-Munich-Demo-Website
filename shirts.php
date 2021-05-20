@@ -10,8 +10,9 @@ $price = 100;
 if (isset($_POST['add'])) {
     $size = mysqli_real_escape_string($db, $_POST['size']);
     $quantity = mysqli_real_escape_string($db, $_POST['quantity']);
-    
-    $query = $db -> query("INSERT INTO shirt (name, size, quantity, price) VALUES ('$name', '$size', '$quantity', '$price')");
+    $price *= $quantity;
+    $username = $_SESSION['username'];
+    $query = $db -> query("INSERT INTO shirt (username, name, size, quantity, price) VALUES ('$username', '$name', '$size', '$quantity', '$price')");
 }
 
 if (isset($_GET['clear'])) {
@@ -36,7 +37,7 @@ if (isset($_GET['clear'])) {
             </div>
         <div class="shirt">
             <h1>FC BAYERN HOME SHIRT 20/21</h1>
-            <p>If you want the away shirt click <a href="awayshirt.php">here</a></p>
+            <p class="here">If you want the away shirt click <a href="awayshirt.php">here</a></p>
             <img class="away" src="images/homeshirt.jpeg" alt="bayern home shirt image">
             <form method="post" action="shirts.php">
                 <label for="size">Choose the size:</label>
@@ -69,7 +70,7 @@ if (isset($_GET['clear'])) {
                         <th>Price</th>
                     </tr>
                     <?php
-                    $query = $db -> query("SELECT * FROM SHIRT");
+                    $query = $db -> query("SELECT * FROM SHIRT WHERE username='$username'");
                     $array = array();
                     while($row = mysqli_fetch_assoc($query)){
                        $array[] = $row;
@@ -100,7 +101,7 @@ if (isset($_GET['clear'])) {
                 <h5 class="vat">Including VAT</h5>
                 <a href="cart.php"><button class="cart">To Cart</button></a>
                 <a href="checkout.php"><button class="checkout">To Checkout</button></a>
-                <p> <a href="shirts.php?clear='1'" style="color: black;">Clear</a> </p>
+                <button> <a href="shirts.php?clear='1'" style="color: black;">Clear</a> </button>
               </div>
               <button class="button2" onclick="openNav()">Open Cart</button>
               <script>

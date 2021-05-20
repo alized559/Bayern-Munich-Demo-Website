@@ -35,7 +35,7 @@
             </div>
             
             <div class="inputs">
-                <input type="password" id="toggle" name="password1" placeholder="Repeat password" required>
+                <input type="password" name="password1" placeholder="Repeat password" required>
                 
             </div>
             <input type="checkbox" class="tog" onclick="togglePassword()">Show Password
