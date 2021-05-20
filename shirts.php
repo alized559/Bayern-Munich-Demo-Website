@@ -11,13 +11,13 @@ if (isset($_POST['add'])) {
     $size = mysqli_real_escape_string($db, $_POST['size']);
     $quantity = mysqli_real_escape_string($db, $_POST['quantity']);
     $price *= $quantity;
-    $username = $_SESSION['username'];
-    $query = $db -> query("INSERT INTO shirt (username, name, size, quantity, price) VALUES ('$username', '$name', '$size', '$quantity', '$price')");
+    $query = $db -> query("INSERT INTO shirt (name, size, quantity, price) VALUES ('$name', '$size', '$quantity', '$price')");
 }
 
 if (isset($_GET['clear'])) {
     $query = $db -> query("DELETE FROM SHIRT");
 }
+
 ?>
 <!DOCTYPE html>
 <html>

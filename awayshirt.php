@@ -9,8 +9,8 @@ $price = 80;
 if (isset($_POST['add'])) {
     $size = mysqli_real_escape_string($db, $_POST['size']);
     $quantity = mysqli_real_escape_string($db, $_POST['quantity']);
-    $username = $_SESSION['username'];
-    $query = $db -> query("INSERT INTO shirt (username, name, size, quantity, price) VALUES ('$username', '$name', '$size', '$quantity', '$price')");
+    $price *= $quantity;
+    $query = $db -> query("INSERT INTO shirt (name, size, quantity, price) VALUES ('$name', '$size', '$quantity', '$price')");
     
     
 }
