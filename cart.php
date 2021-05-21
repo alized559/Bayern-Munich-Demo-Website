@@ -52,7 +52,7 @@ $data = ob_get_clean();
                     <option>Spain</option>
                     <option>Sweden</option>
                     <option>Poland</option>
-                    <option>Portugal</option>
+                    <option>Portuga</option>
                 </select>
                 <p>Expected shipment costs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.00$</p>
                 <hr>
