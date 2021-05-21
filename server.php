@@ -5,7 +5,7 @@ $username = "";
 $email = "";
 $errors = array();
 
-$db = mysqli_connect('localhost', 'root', '', 'Registration');
+$db = mysqli_connect('localhost', 'id16555764_root', 'Bayern_munich1', 'id16555764_shopping');
 
 if (isset($_POST['signup'])) {
     $email = mysqli_real_escape_string($db, $_POST['email']);
@@ -57,7 +57,7 @@ if (isset($_POST['login'])) {
             } else {
                 header('location: shirts.php');
             }
-            
+
         } else {
             array_push($errors, "Wrong username or password");
         }

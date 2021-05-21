@@ -5,17 +5,18 @@ $name = "Home Shirt";
 $size = "Small";
 $quantity = 0;
 $price = 100;
-
+$username = $_SESSION['username'];
 
 if (isset($_POST['add'])) {
     $size = mysqli_real_escape_string($db, $_POST['size']);
     $quantity = mysqli_real_escape_string($db, $_POST['quantity']);
     $price *= $quantity;
-    $query = $db -> query("INSERT INTO shirt (name, size, quantity, price) VALUES ('$name', '$size', '$quantity', '$price')");
+
+    $query = $db -> query("INSERT INTO shirt (username, name, size, quantity, price) VALUES ('$username', '$name', '$size', '$quantity', '$price')");
 }
 
 if (isset($_GET['clear'])) {
-    $query = $db -> query("DELETE FROM SHIRT");
+    $query = $db -> query("DELETE FROM shirt WHERE username = '$username'");
 }
 
 ?>
@@ -50,7 +51,7 @@ if (isset($_GET['clear'])) {
                     <option>3XLarge</option>
                 </select>
                 <br><br>
-                <label for="quantity">Choose the quantity:</label> 
+                <label for="quantity">Choose the quantity:</label>
                 <input type="number" name="quantity" min="1" max="10" value="<?php echo $quantity; ?>" required>
                 <hr class="line">
                 <div class="price">
@@ -70,7 +71,7 @@ if (isset($_GET['clear'])) {
                         <th>Price</th>
                     </tr>
                     <?php
-                    $query = $db -> query("SELECT * FROM SHIRT WHERE username='$username'");
+                    $query = $db -> query("SELECT * FROM shirt WHERE username='$username'");
                     $array = array();
                     while($row = mysqli_fetch_assoc($query)){
                        $array[] = $row;
@@ -108,12 +109,12 @@ if (isset($_GET['clear'])) {
                 function openNav() {
                   document.getElementById("mySidenav").style.width = "400px";
                 }
-                
+
                 function closeNav() {
                   document.getElementById("mySidenav").style.width = "0";
                 }
                 </script>
-                
+
         </div>
         <div class="divImg">
                 <img src="images/bayern.png" alt="bayern logo" style="width: 100px;">

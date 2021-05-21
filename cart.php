@@ -1,4 +1,4 @@
-<?php 
+<?php
 ob_start();
 require("shirts.php");
 $data = ob_get_clean();
@@ -22,14 +22,14 @@ $data = ob_get_clean();
             <h1>Your Cart</h1>
         </div>
         <hr class="payhr1">
-        
+
         <div class="home">
             <img src="images/homeshirt.jpeg">
             <span style="color: rgb(167, 42, 42);"><h3>FC Bayern Home Shirt 20/21</span><br><br><span style="color: grey;"> Available immediately</span></h3>
         </div>
         <span style="color: rgb(167, 42, 42);"><h3 class="h3home">Quantity: <?php echo $homeQuantity ?></h3></span>
         <hr class="hrhome">
-        
+
         <hr class="payhr2">
         <div class="home1">
             <img src="images/awayshirt.jpeg">
@@ -37,7 +37,7 @@ $data = ob_get_clean();
         </div>
         <span style="color: rgb(167, 42, 42);"><h3 class="h3home">Quantity: <?php echo $awayQuantity ?></h3></span>
         <hr class="hrhome1">
-        
+
         <div class="cartform">
             <form method="post" action="checkout.php">
                 <label>your delivery country</label>
@@ -60,7 +60,7 @@ $data = ob_get_clean();
                 <h3 class="tot">Total</h3>
                 <h3 class="cartformh3"><?php echo $totalPrice ?></h3>
                 <h5>Including VAT</h5>
-                <button class="check"><a href="cart.php?clear='1'" style="color: white; text-decoration: none;">Clear</a></button>
+                <button class="check"><a href="cart.php?clear='2'" style="color: white; text-decoration: none;">Clear</a></button>
                 <button class="check">Pay</button>
             </form>
         </div>
