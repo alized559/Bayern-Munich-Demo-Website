@@ -5,6 +5,7 @@ $name = "Away Shirt";
 $size = "Small";
 $quantity = 0;
 $price = 80;
+$username = $_SESSION['username'];
 
 if (isset($_POST['add'])) {
     $size = mysqli_real_escape_string($db, $_POST['size']);
